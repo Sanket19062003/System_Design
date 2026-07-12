@@ -25,7 +25,15 @@ class ShoppingCart{
 }
 
 class CartInvoicePrinter{
-
+    ShoppingCart shoppingCart;
+    CartInvoicePrinter(ShoppingCart shoppingCart){
+        this.shoppingCart = shoppingCart;
+    }
+    public void printInvoice(){
+        for(product p:shoppingCart.getProducts()) {
+            System.out.println(p.name + " : " + p.price);
+        }
+    }
 }
 
 class CartDbStorage{
