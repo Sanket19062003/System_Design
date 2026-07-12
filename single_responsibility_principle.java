@@ -44,6 +44,17 @@ class CartDbStorage{
 
 class single_responsibility_principle {
     public static void main(String[] args) {
+        ShoppingCart sc = new ShoppingCart();
+        sc.addProduct(new product(10000,"abc"));
+        sc.addProduct(new product(20000,"def"));
+
+        CartInvoicePrinter ci = new CartInvoicePrinter(sc);
+        ci.printInvoice();
+
+        CartDbStorage cdb = new CartDbStorage();
+        cdb.SaveToDB();
+
+        System.out.println("Total Price : "+sc.CalculateTotal());
 
     }
 }
