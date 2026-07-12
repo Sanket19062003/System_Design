@@ -1,5 +1,10 @@
 class product{
-
+    private double price;
+    private String name;
+    public product(double price, String name){
+        this.price = price;
+        this.name = String name;
+    }
 }
 
 class ShoppingCart{
