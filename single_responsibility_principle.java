@@ -37,7 +37,9 @@ class CartInvoicePrinter{
 }
 
 class CartDbStorage{
-
+    public void SaveToDB(){
+        System.out.println("Save to DB");
+    }
 }
 
 class single_responsibility_principle {
