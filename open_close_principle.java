@@ -47,8 +47,11 @@ class SaveToSQLDB implements DBPersistence{
         System.out.println("Save to SQLDB");
     }
 }
-class SaveToMongoDB{
-
+class SaveToMongoDB implements DBPersistence{
+    @java.lang.Override
+    public void save() {
+        System.out.println("Save to MongoDB");
+    }
 }
 
 class SaveToFile{
