@@ -54,6 +54,9 @@ class SaveToMongoDB implements DBPersistence{
     }
 }
 
-class SaveToFile{
-
+class SaveToFile implements DBPersistence{
+    @java.lang.Override
+    public void save() {
+        System.out.println("Save to File");
+    }
 }
