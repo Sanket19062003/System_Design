@@ -38,7 +38,7 @@ class CartInvoicePrinter{
 }
 
 public abstract class DBPersistence{
-
+    public void save();
 }
 
 class SaveToSQLDB{
