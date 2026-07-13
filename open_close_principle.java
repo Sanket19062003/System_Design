@@ -26,7 +26,15 @@ class ShoppingCart{
 }
 
 class CartInvoicePrinter{
-
+    ShoppingCart shoppingCart;
+    CartInvoicePrinter(ShoppingCart shoppingCart){
+        this.shoppingCart=shoppingCart;
+    }
+    public void printInvoice(){
+        for(product p:shoppingCart.getAllProducts()) {
+            System.out.println(p.name + " " + p.price);
+        }
+    }
 }
 
 public abstract class DBPersistence{
