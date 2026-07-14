@@ -78,3 +78,17 @@ class savingAccount implements withdrawableAccount{
         System.out.println("Balance : " + balance);
     }
 }
+
+class liskov_substitution_principle{
+    public static void main(String[] args) {
+        list<withdrawableAccount> w = new ArrayList<>();
+        w.add(new savingAccount());
+        w.add(new currentAccount());
+
+        list<nonWithdrawableAccount> nw = new ArrayList<>();
+        w.add(new fixedDepositAccount());
+
+        client c = new client(nw,w);
+        c.processTransaction();
+    }
+}
