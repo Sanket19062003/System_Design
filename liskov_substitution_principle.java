@@ -59,5 +59,22 @@ class currentAccount implements withdrawableAccount{
     }
 }
 
-class savingAccount{
+class savingAccount implements withdrawableAccount{
+    double balance;
+    savingAccount(double balance){
+        this.balance = balance;
+    }
+    @java.lang.Override
+    void withdraw(double amount) {
+        balance -= amount;
+        System.out.println("Withdrawal : " + amount);
+        System.out.println("Balance : " + balance);
+    }
+
+    @java.lang.Override
+    void deposit(double amount) {
+        balance += amount;
+        System.out.println("Deposited : " + amount);
+        System.out.println("Balance : " + balance);
+    }
 }
