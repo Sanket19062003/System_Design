@@ -22,8 +22,8 @@ class client{
 public abstract class nonWithdrawableAccount{
     void deposit(double amount);
 }
-public abstract class withdrawableAccount{
-
+public abstract class withdrawableAccount implements nonWithdrawableAccount{
+    void withdraw(double amount);
 }
 
 class fixedDepositAccount{
