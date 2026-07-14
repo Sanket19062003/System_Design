@@ -26,7 +26,17 @@ public abstract class withdrawableAccount implements nonWithdrawableAccount{
     void withdraw(double amount);
 }
 
-class fixedDepositAccount{
+class fixedDepositAccount implements nonWithdrawableAccount{
+    double balance;
+    fixedDepositAccount(double balance){
+        this.balance = balance;
+    }
+    @java.lang.Override
+    void deposit(double amount) {
+        balance += amount;
+        System.out.println("Deposited : " + amount);
+        System.out.println("Balance : " + balance);
+    }
 }
 
 class currentAccount{
