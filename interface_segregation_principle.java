@@ -33,6 +33,20 @@ class rectangle implements twoDShapes{
     }
 }
 
-class cube{
+class cube implements threeDShapes{
+    private double side;
+    cube(double side){
+        this.side = side;
+    }
+    @java.lang.Override
+    void area() {
+        double area = 6*side*side;
+        System.out.println("Area of cube is: "+area);
+    }
 
+    @java.lang.Override
+    void volume() {
+        double volume = side*side*side;
+        System.out.println("Volume of cube is: "+volume);
+    }
 }
