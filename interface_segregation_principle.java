@@ -1,5 +1,5 @@
 public abstract class twoDShapes{
-
+    void area();
 }
 
 public abstract class threeDShapes{
