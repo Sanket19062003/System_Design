@@ -3,7 +3,8 @@ public abstract class twoDShapes{
 }
 
 public abstract class threeDShapes{
-
+    void area();
+    void volume();
 }
 
 class square{
