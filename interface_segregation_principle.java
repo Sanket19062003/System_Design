@@ -20,8 +20,17 @@ class square implements twoDShapes{
     }
 }
 
-class rectangle{
-
+class rectangle implements twoDShapes{
+    double length,breadth,area;
+    rectangle(double length, double breadth){
+        this.length = length;
+        this.breadth = breadth;
+    }
+    @java.lang.Override
+    void area() {
+        area = length*breadth;
+        System.out.println("Area of rectangle is: "+area);
+    }
 }
 
 class cube{
