@@ -50,3 +50,15 @@ class cube implements threeDShapes{
         System.out.println("Volume of cube is: "+volume);
     }
 }
+
+class interface_segregation_principle{
+    public static void main(String[] args) {
+        twoDShapes twd = new square(4.0,6.0);
+        twd.area();
+        twoDShapes twd2 = new rectangle(4.0,6.0);
+        twd2.area();
+        threeDShapes thd =  new cube(6.0);
+        thd.area();
+        thd.volume();
+    }
+}
